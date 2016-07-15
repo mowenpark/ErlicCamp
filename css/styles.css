@@ -5,6 +5,7 @@ html {
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .group:before,
@@ -32,65 +33,35 @@ img {
   width: 100%;
 }
 
-/*ul.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}*/
-
-/* Change the link color to #111 (black) on hover */
-/*li a:hover {
-    background-color: #111;
-}*/
-
-/*Strip the ul of padding and list styling*/
 ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
 	position: absolute;
+  background: #2f3036;
+  width: 100%;
 }
 
-/*Create a horizontal list with spacing*/
+
 li {
 	display:inline-block;
 	float: left;
-	margin-right: 1px;
 }
 
-/*Style for menu links*/
 li a {
 	display:block;
 	min-width:140px;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #fff;
-	background: #2f3036;
 	text-decoration: none;
 }
 
-/*Hover state for top level links*/
 li:hover a {
-	background: #19c589;
+	background: #ffaf00;
 }
 
-/*Style for dropdown links*/
 li:hover ul a {
 	background: #f3f3f3;
 	color: #2f3036;
@@ -98,41 +69,37 @@ li:hover ul a {
 	line-height: 40px;
 }
 
-/*Hover state for dropdown links*/
 li:hover ul a:hover {
-	background: #19c589;
+	background: #ffaf00;
 	color: #fff;
 }
 
-/*Hide dropdown links until they are needed*/
 li ul {
 	display: none;
 }
 
-/*Make dropdown links vertical*/
 li ul li {
 	display: block;
 	float: none;
 }
 
-/*Prevent text wrapping*/
 li ul li a {
 	width: auto;
 	min-width: 100px;
 	padding: 0 20px;
 }
 
-/*Display the dropdown on hover*/
 ul li a:hover + .hidden, .hidden:hover {
 	display: block;
+  width: auto;
+	min-width: 140px;
 }
 
-/*Style 'show menu' label button and hide it by default*/
 .show-menu {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
 	text-decoration: none;
 	color: #fff;
-	background: #19c589;
+	background: #ffaf00;
 	text-align: center;
 	padding: 10px 0;
 	display: none;
@@ -148,31 +115,17 @@ input[type=checkbox]:checked ~ #menu{
     display: block;
 }
 
+.icon-container {
+  padding-left: 20px;
+}
+
 .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #cccccc;
+  background-color: #fff;
   border-radius: 1px;
   margin: 5px;
-}
-
-
-/*Responsive Styles*/
-
-@media screen and (max-width : 760px){
-	/*Make dropdown links appear inline*/
-	ul {
-		display: none;
-	}
-	/*Make all menu links full width*/
-	ul li, li a {
-		width: 100%;
-	}
-	/*Display 'show menu' link*/
-	.show-menu {
-		display:block;
-	}
 }
 
 video {
@@ -207,7 +160,6 @@ video {
 .hero-container {
   background: rgba(25,25,25,.52);
   margin-top: 10px;
-  margin-left: 8px;
   width: 755px;
   height: 180px;
   border-radius: 2px;
@@ -215,7 +167,7 @@ video {
   right: auto;
 }
 
-.hero h1 {
+.hero-title {
   font-size: 100px;
   font-family: Montserrat,sans-serif;
   margin-top: 0;
@@ -335,6 +287,19 @@ video {
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
+  ul {
+		display: none;
+	}
+
+	ul li, li a {
+		width: 100%;
+	}
+
+	.show-menu {
+		display:block;
+    cursor: pointer;
+	}
+
   .hero-content {
     margin-left: 24px;
   }
@@ -360,13 +325,22 @@ video {
     min-width: 100%;
   }
 
-}
+  .hero-container {
+    width: 450px;
+    height: 160px;
+  }
 
+  .hero-hrule {
+    width: 325px;
+    height: 4px;
+  }
 
-@media (max-width: 400px) {
+  .hero-title {
+    font-size: 55px;
+  }
 
-  .single-box,.double-box {
-    min-width: 100%;
+  .hero-sub {
+    font-size: 20px;
   }
 
 }

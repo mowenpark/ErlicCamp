@@ -1,5 +1,4 @@
 (function($) {
-    "use strict";
 
     $('.page-scroll').bind('click', function(event) {
         var target = $( $(this).attr('href') );
