@@ -28,10 +28,26 @@ hr, img {
     border: 0;
 }
 
+h2,p {
+  color: #333;
+}
+
 img,video {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+button {
+  cursor: pointer;
+  background-color: #ffaf00;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 ul {
@@ -133,7 +149,6 @@ input[type=checkbox]:checked ~ #menu{
   margin: 0 auto;
   background: url("http://solairesf.com/wp-content/uploads/2015/12/amenitieshero.jpg") no-repeat center center;
   background-size: cover;
-  margin-bottom: 50px;
 }
 
 .hero-wrapper {
@@ -210,8 +225,55 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 .container {
+  width: 100%;
+  padding: 45px 0;
+  min-height: 300px;
+}
+
+.dark-background {
+  background-color: #f7f7f7;
+}
+
+.sub-container {
   margin: 0 auto;;
   width: 90%;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 5px 0;
+  color: #333;
+}
+
+.primary {
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.feature {
+  display: inline-block;
+  float: left;
+  font-size: 1rem;
+  height: 100%;
+  width: 33.33%;
+  overflow: hidden;
+}
+
+.icon-lg {
+  font-size: 70px;
+  color: #ffaf00;
+}
+
+.media-body {
+  line-height: 1.25;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 .row {
@@ -228,7 +290,6 @@ input[type=checkbox]:checked ~ #menu{
   font-size: 1rem;
   height: 100%;
   width: 33.33%;
-  border: 10px solid white;
   overflow: hidden;
 }
 
@@ -248,6 +309,9 @@ input[type=checkbox]:checked ~ #menu{
   font-size: 1rem;
   height: 100%;
   width: 66.66%;
+}
+
+#two .single-box,.double-box {
   border: 10px solid white;
 }
 
@@ -257,8 +321,37 @@ input[type=checkbox]:checked ~ #menu{
   color: white;
 }
 
+.basic-info {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.form-input {
+  float: left;
+  width: 25%;
+  padding-right: 15px;
+}
+
+.end-item {
+  padding-right: 0;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+textarea {
+  min-height: 200px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .footer-container {
-  margin-top: 10px;
   position: relative;
   height: 300px;
   background: #2b3644;
@@ -288,6 +381,7 @@ input[type=checkbox]:checked ~ #menu{
 }
 
 .footer-row {
+  padding-top: 20px;
   margin: 0 auto;
   max-width: 80%;
 }
@@ -298,7 +392,7 @@ input[type=checkbox]:checked ~ #menu{
   font-size: 1rem;
   height: 100%;
   width: 33.33%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer-section h4 {
@@ -323,7 +417,9 @@ input[type=checkbox]:checked ~ #menu{
 
 .footer-list a {
   text-align: left;
-  font-size: 10px;
+  font-size: 15px;
+  line-height: 25px;
+  height: auto;
   color: #ffaf00;
 }
 
@@ -332,10 +428,42 @@ input[type=checkbox]:checked ~ #menu{
   color: #fff;
 }
 
+.icon-item {
+  display: inline-block !important;
+  width: auto;
+  padding: 0 5px;
+}
+
+.icon-item a {
+  display: inline;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.copy-write {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 8px;
+  padding: 10px;
+  color: #fff;
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
-  ul {
+  h1,h2 {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  ul.nav {
 		display: none;
 	}
 
@@ -352,6 +480,10 @@ input[type=checkbox]:checked ~ #menu{
     margin-left: 24px;
   }
 
+  .feature {
+    min-width: 100%;
+  }
+
   .double-box {
     min-width: 100%;
   }
@@ -364,10 +496,30 @@ input[type=checkbox]:checked ~ #menu{
     height: 64px;
     width: 64px;
   }
+
+  .form-input {
+    width: 100%;
+    padding: 0;
+  }
+
+  input[type=text] {
+    height: 85px;
+    font-size: 25px;
+  }
+
+  textarea {
+    font-size: 25px;
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 800px) {
+
+  button {
+      padding: 8px 25px;
+      font-size: 15px;
+      margin-bottom: 5px;
+  }
 
   .single-box,.double-box {
     min-width: 100%;
@@ -391,4 +543,15 @@ input[type=checkbox]:checked ~ #menu{
     font-size: 20px;
   }
 
+}
+
+@media only screen and (max-width : 500px) {
+  .footer-list > li > a {
+    font-size: 12px;
+  }
+
+  .hero-container {
+    width: 100%;
+    height: auto;
+  }
 }
